@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(/Images/whatsapp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.login-here {
+    color: rgb(234, 235, 236);
+    background-color: rgb(241, 219, 219, 0.1);
+    height: 60vh;
+    width: 30vw;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    border-radius: 15px;
+}
+
+.login-head {
+    height: 15%;
+    font-size: 25px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: rgba(209,148,146, 0.7);
+}
+
+.login-main {
+    position: absolute;
+    opacity: 1;
+    top: 130px;
+    left: 135px;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* style inputs and link buttons */
+input,
+.btn {
+    width: 130%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+input:hover,
+.btn:hover {
+    opacity: 1;
+}
+
+/* style the submit button */
+input[type=submit] {
+    background-color: rgba(209,148,146,255);
+    color: white;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(209,148,146,255);
+}
