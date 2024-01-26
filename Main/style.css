@@ -26,7 +26,51 @@
 }
 
 .searchInput {
+    padding-left: 15px;
+    border-radius: 5px;
+    height: 30px;
+    width: 350px;
     display: none;
+    outline: none;
+}
+
+.query-modal{
+    position: absolute;
+    top: 74px;
+    right: 0px;
+    color: whitesmoke;
+    background-color: rgb(17,27,33);
+    height: 608px;
+    width: 500px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* flex-direction: column; */
+    overflow: auto;
+    border: 1px solid black;
+    display: none;
+}
+
+.noMessage{
+    display: flex;
+    height: 608px;
+    align-items: center;
+    justify-content: center;
+}
+
+.query-message{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 20px;
+    color: rgba(108,123,133,255);
+    height: 80px;
+    width: auto;
+    border: 1px solid;
+    /* border-top: none; */
+    border-color: rgb(30, 43, 51);
+    cursor: pointer;
 }
 
 .searchIcon {
@@ -51,6 +95,17 @@
     display: flex;
     align-items: center;
 }
+
+.no-message{
+    height: 400px;
+    width: 500px;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(108,123,133,255);
+}
+
 
 .three-dots {
     background-color: rgba(20, 28, 34, 255);

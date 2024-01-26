@@ -7,7 +7,6 @@ const imagesBox = document.querySelector(".images-box");
 const closeButton = document.querySelector(".close-button");
 const logOut = document.querySelector(".log-out");
 const emojisButton = document.querySelector(".emoji-button");
-let input = false;
 sendButton.disabled = true;
 inputBox.focus();
 
@@ -155,6 +154,7 @@ function messageBox(messageValue, isImagePresent, time, date, image, uid) {
     let messageList = document.createElement("div");
     messageList.setAttribute("class", "message-box");
     messageList.setAttribute("uid", `${id}`)
+    messageList.setAttribute("date", `${date}`)
     isImagePresent ? messageList.classList.add("message-input-image") : "";
     messageList.innerHTML = `
             <div class="message-info">
