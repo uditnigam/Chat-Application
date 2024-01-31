@@ -42,10 +42,6 @@
     background-color: rgb(17,27,33);
     height: 608px;
     width: 500px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* flex-direction: column; */
     overflow: auto;
     border: 1px solid black;
     display: none;
@@ -68,7 +64,6 @@
     height: 80px;
     width: auto;
     border: 1px solid;
-    /* border-top: none; */
     border-color: rgb(30, 43, 51);
     cursor: pointer;
 }
