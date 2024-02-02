@@ -31,7 +31,6 @@ emojisButton.addEventListener('click', () => {
 
 picker.on('emoji', (emoji) => {
     inputBox.value += emoji;
-    // inputBox.click();
 });
 
 // To show the dropdown
@@ -68,9 +67,7 @@ imageFile.addEventListener("change", (e) => {
     for (let i = 0; i < imageFile.files.length; i++) {
         const fileReader = new FileReader();
         fileReader.readAsDataURL(imageFile.files[i]);
-        // console.log("imageFile.files[i]:", imageFile.files[i].name)
         fileReader.addEventListener("load", function (e) {
-            // console.log("e", e)
             let images = document.createElement("div");
             images.setAttribute("class", "images");
             images.innerHTML = `<img width="80px" name="${imageFile.files[i].name}" src="${e.target.result}" />
