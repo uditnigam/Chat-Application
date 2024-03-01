@@ -1,65 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 * {
     margin: 0;
     padding: 0;
+    font-family: "Mulish", sans-serif;
 }
 
 body {
+    height: 100vh;
+    width: 100vw;
     background-image: url(/Images/whatsapp.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-here {
-    color: rgb(234, 235, 236);
-    background-color: rgb(241, 219, 219, 0.1);
     height: 60vh;
     width: 30vw;
-    position: absolute;
-    top: 20%;
-    left: 35%;
-    border-radius: 15px;
+    color: #eee0e0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0c13175a;
+    border-radius: 10px;
+    border: 1px solid #202c33;
 }
 
 .login-head {
     height: 15%;
+    width: 100%;
     font-size: 25px;
-    font-weight: 800;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    background-color: rgba(209,148,146, 0.7);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #202c33;
+    border-bottom: 1px solid #202c33;
 }
 
 .login-main {
-    position: absolute;
-    opacity: 1;
-    top: 130px;
-    left: 135px;
     height: 85%;
+    width: 100%;
+    opacity: 1;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 30px;
-    align-items: center;
     flex-direction: column;
 }
 
 /* style inputs and link buttons */
-input,
-.btn {
-    width: 130%;
+.input-box{
+    height: 30px;
+    width: 350px;
     padding: 12px;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 5px 0;
     opacity: 0.85;
-    display: inline-block;
     font-size: 17px;
-    line-height: 20px;
-    text-decoration: none;
+    background-color: #202c33;
+    color: #eee0e0;
+    outline: none;
+}
+
+.login-btn{
+    height: 55px;
+    width: 363px;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
 }
 
 input:hover,
@@ -69,11 +85,11 @@ input:hover,
 
 /* style the submit button */
 input[type=submit] {
-    background-color: rgba(209,148,146,255);
-    color: white;
+    background-color: #255c4c;
+    color: #eee0e0;
     cursor: pointer;
 }
 
 input[type=submit]:hover {
-    background-color: rgba(209,148,146,255);
+    background-color: #1a4337;
 }

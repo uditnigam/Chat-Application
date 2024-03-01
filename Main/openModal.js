@@ -8,14 +8,14 @@ const openModal = (e) => {
             <div class="modal-header">
                 <div class="message-info">
                     <i class="fa-solid fa-user"></i>
-                    <div class="username">user_name</div>
+                    <div class="username">Udit Nigam</div>
                 </div>
                 <button class="close fa-solid fa-x"></button>
             </div>
             <div class="modal-main">
-                <i class="arrow-left fa-solid fa-circle-arrow-left"></i>
+                <i class="arrow-left fa-solid fa-arrow-left"></i>
                 <div class="modalImage"><img class="img-cont" name="${e.target.name}" src="${e.target.src}"/></div>
-                <i class="arrow-right fa-solid fa-circle-arrow-right"></i>
+                <i class="arrow-right fa-solid fa-arrow-right"></i>
             </div>
                 `;
     main.appendChild(imgModal);

@@ -121,7 +121,6 @@ const createMessageBox = (imageIndex) => {
             }
         }
         messageBox(inputBox.value, isImagePresent, currentTime, date, image, uid);
-        // console.log()
         //Local Storage Data Save
         let userData = JSON.parse(localStorage.getItem("messageDetails")) ?? [];
         userData.push(
@@ -155,12 +154,14 @@ function messageBox(messageValue, isImagePresent, time, date, image, uid) {
     isImagePresent ? messageList.classList.add("message-input-image") : "";
     messageList.innerHTML = `
             <div class="message-info">
-                <i class="fa-solid fa-user"></i>
-                <div class="username">user_name</div>
+                <div class="profile-box">
+                    <img class='profile-pic' src='./../Images/profile-pic.avif'/>
+                </div>
+                <div class="username">Udit Nigam</div>
             </div>
             ${isImagePresent ?
                 `<div class="message-img-cont">
-                <img class="message-img" name="${image.name}" src="${image.src}">
+                    <img class="message-img" name="${image.name}" src="${image.src}">
                 </div>` : ""}
         ${messageValue ? `
             <div class="message-input">

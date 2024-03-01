@@ -31,12 +31,12 @@ searchInput.addEventListener("keyup", (e) => {
             if (query.trim() && element.innerText.trim().includes(query)) {
                 let messageId = messageBoxes[i].getAttribute("uid");
                 str += `
-                        <div class = 'query-message' uid = ${messageId}>
+                        <div class = 'query-message-box' uid = ${messageId}>
                             <div class="query-message-date">
                                 <div>${messageBoxes[i].getAttribute("date")}</div>
-                                <div>${messageBoxes[i].children[0].innerText} : ${messageBoxes[i].children[1].innerText}</div>
+                                <div class='query-message'>${messageBoxes[i].children[0].innerText} : ${messageBoxes[i].children[1].innerText}</div>
                             </div>
-                            <div>${messageBoxes[i].children[2].innerText}</div>
+                            <div class='query-message-time'>${messageBoxes[i].children[2].innerText}</div>
                         </div>
                     `;
             }
@@ -46,7 +46,7 @@ searchInput.addEventListener("keyup", (e) => {
         str += `<div class="noMessage">No Message</div>`
     }
     queryModal.innerHTML = str;
-    const queryMessageArr = document.querySelectorAll(".query-message");
+    const queryMessageArr = document.querySelectorAll(".query-message-box");
     queryMessageArr.forEach(queryMsgBox => queryMsgBox.addEventListener('click', () => scrollToMessage(queryMsgBox)))
     // queryMessageArr.forEach((queryMsgBox) => {
     //     queryMsgBox.addEventListener('click', () =>{
