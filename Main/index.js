@@ -241,8 +241,3 @@ logOut.addEventListener("click", (e) => {
     window.location.href = "/Login/login.html";
 })
 
-// if (localStorage.loginStatus === "Logged In") {
-//     window.location.href = "/Main/index.html";
-// } else if(localStorage.loginStatus === "Logged Out"){
-//     window.location.href = "/login.html";
-// }

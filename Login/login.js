@@ -8,7 +8,7 @@ submit.addEventListener("click", (e) => {
 });
 
 loginPassword.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || (username === "rajnigam" && password === "Udit@123")) {
+    if (e.key === "Enter" || (username === "admin" && password === "admin")) {
         getFormValue();
     };
 });
@@ -16,11 +16,11 @@ loginPassword.addEventListener("keydown", (e) => {
 function getFormValue() {
     let username = loginUsername.value;
     let password = loginPassword.value;
-    if (username === "rajnigam" && password === "Udit@123") {
+    if (username === "chatroom" && password === "chat@room") {
         localStorage.setItem("loginStatus", "Logged In")
         console.log("loginUsername :", username);
         console.log("loginPassword :", password);
-        window.location.href = "/Main/index.html";
+        window.location.href = "/index.html";
     } else {
         alert("INVALID: Username Or Password");
     }
