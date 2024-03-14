@@ -155,7 +155,7 @@ function messageBox(messageValue, isImagePresent, time, date, image, uid) {
     messageList.innerHTML = `
             <div class="message-info">
                 <div class="profile-box">
-                    <img class='profile-pic' src='./../Images/profile-pic.avif'/>
+                    <img class='profile-pic' src='./Images/profile-pic.avif'/>
                 </div>
                 <div class="username">Udit Nigam</div>
             </div>
