@@ -4,7 +4,8 @@
     padding: 0;
     font-family: "Mulish", sans-serif;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .app{
