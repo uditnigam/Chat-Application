@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: "Mulish", sans-serif;
+    box-sizing: border-box;
 }
 
 .app{
@@ -249,7 +250,7 @@
 /********************* Main Container *******************/
 
 .main {
-    height: 78%;
+    height: 81%;
     background-image: url(/Images/whatsapp.png);
     background-repeat: no-repeat;
     background-size: cover;

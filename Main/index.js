@@ -52,7 +52,6 @@ window.onclick = function (event) {
     }
 }
 const stateHandle = (isImagePresent) => {
-
     if (inputBox.value.trim() || isImagePresent) {
         sendButton.disabled = false; //button remains disabled
     } else {
@@ -88,25 +87,27 @@ imageFile.addEventListener("change", (e) => {
     inputBox.focus();
 });
 
+const getTime = () => {
+    let currentDate = new Date();
+    let getHours = currentDate.getHours();
+    let hours = getHours < 10 ? "0" + getHours : getHours;
+    let getMinutes = currentDate.getMinutes();
+    let minutes = getMinutes < 10 ? "0" + getMinutes : getMinutes;
+    let time = hours + ":" + minutes;
+    return time;
+};
+
+const getDate = () => {
+    let currentDate = new Date();
+    let getDate = currentDate.getDate();
+    let getMonth = currentDate.getMonth() + 1;
+    let getYear = currentDate.getFullYear();
+    let date = getDate + "/" + getMonth + "/" + getYear;
+    return date;
+};
+
 // Function creating message box
 const createMessageBox = (imageIndex) => {
-    const getTime = () => {
-        let currentDate = new Date();
-        let getHours = currentDate.getHours();
-        let hours = getHours < 10 ? "0" + getHours : getHours;
-        let getMinutes = currentDate.getMinutes();
-        let minutes = getMinutes < 10 ? "0" + getMinutes : getMinutes;
-        let time = hours + ":" + minutes;
-        return time;
-    };
-    const getDate = () => {
-        let currentDate = new Date();
-        let getDate = currentDate.getDate();
-        let getMonth = currentDate.getMonth() + 1;
-        let getYear = currentDate.getFullYear();
-        let date = getDate + "/" + getMonth + "/" + getYear;
-        return date;
-    };
     const currentTime = getTime();
     const date = getDate();
     const uid = generateUID();
@@ -160,7 +161,7 @@ function messageBox(messageValue, isImagePresent, time, date, image, uid) {
                 <div class="username">Udit Nigam</div>
             </div>
             ${isImagePresent ?
-                `<div class="message-img-cont">
+            `<div class="message-img-cont">
                     <img class="message-img" name="${image.name}" src="${image.src}">
                 </div>` : ""}
         ${messageValue ? `
@@ -191,40 +192,30 @@ function generateUID() {
 
 // Functions for sending messages
 inputBox.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" && (inputBox.value.trim() && displayImg.innerHTML)) {
-        for (let i = 0; i < displayImg.children.length; i++) {
-            createMessageBox(i);
+    if (e.key === "Enter" && (inputBox.value.trim() || displayImg.innerHTML)) {
+        if (displayImg.innerHTML) {
+            for (let i = 0; i < displayImg.children.length; i++) {
+                createMessageBox(i);
+            }
+        } else {
+            createMessageBox();
         }
         displayImg.innerHTML = "";
-    }
-    else if (e.key === "Enter" && (displayImg.innerHTML)) {
-        for (let i = 0; i < displayImg.children.length; i++) {
-            createMessageBox(i);
-        }
-        displayImg.innerHTML = "";
-    }
-    else if (e.key === "Enter" && (inputBox.value.trim())) {
-        createMessageBox();
     }
 });
 
 //Send Button
 sendButton.addEventListener("click", (e) => {
-    if ((inputBox.value.trim() && displayImg.innerHTML)) {
-        for (let i = 0; i < displayImg.children.length; i++) {
-            createMessageBox(i);
-            stateHandle(false);
+    if ((inputBox.value.trim() || displayImg.innerHTML)) {
+        if (displayImg.innerHTML) {
+            for (let i = 0; i < displayImg.children.length; i++) {
+                createMessageBox(i);
+            }
+        } else {
+            createMessageBox();
         }
-        displayImg.innerHTML = "";
-    } else if (displayImg.innerHTML) {
-        for (let i = 0; i < displayImg.children.length; i++) {
-            createMessageBox(i);
-            stateHandle(false);
-        }
-        displayImg.innerHTML = "";
-    } else if (inputBox.value.trim()) {
-        createMessageBox();
         stateHandle(false);
+        displayImg.innerHTML = "";
     }
     inputBox.focus();
 });

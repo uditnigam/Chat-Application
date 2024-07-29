@@ -60,9 +60,9 @@ function scrollToMessage(queryMsgBox) {
     const messageBoxes = document.querySelectorAll(".message-box");
     messageBoxes.forEach((e) => {
         selectedMsgUid = queryMsgBox.getAttribute("uid");
-        console.log(selectedMsgUid);
+        // console.log(selectedMsgUid);
         if (selectedMsgUid == e.getAttribute("uid")) {
-            console.log(e.parentElement)
+            // console.log(e.parentElement)
             e.scrollIntoView({ behavior: 'smooth', block: 'end' });
             queryModal.style.display = "none";
             queryModal.innerHTML = "";
