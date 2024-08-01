@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,16 +9,16 @@
     overflow-y: hidden; */
 }
 
-.app{
+.app {
     height: 100vh;
     width: 100vw;
     background: #0c1317;
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-.chat-list-container{
-    height: 100vh;
+.chat-list-container {
+    height: 100%;
     width: 25%;
     border-right: 1px solid #303b43;
     color: #eee0e0;
@@ -31,7 +32,7 @@
     background-color: #202c33;
 }
 
-.heading{
+.heading {
     height: 100%;
     display: flex;
     justify-content: start;
@@ -39,17 +40,17 @@
     margin-left: 15px;
 }
 
-.chat-list{
+.chat-list {
     height: 89%;
     background-color: #111b21;
 }
 
-.chat-container{
+.chat-container {
     height: 100%;
     width: 75%;
 }
 
-.user-chat{
+.user-chat {
     height: 85px;
     display: flex;
     align-items: center;
@@ -69,18 +70,18 @@
     padding-right: 10px;
 }
 
-.user-container{
+.user-container {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.user-img{
+.user-img {
     height: 50px;
     width: 50px;
 }
 
-.user-name{
+.user-name {
     font-size: 18px;
     font-weight: 500;
     color: #eee0e0;
@@ -107,7 +108,7 @@
     color: #eee0e0;
 }
 
-.query-modal{
+.query-modal {
     height: 608px;
     width: 500px;
     position: absolute;
@@ -120,7 +121,7 @@
     border-radius: 3px;
 }
 
-.noMessage{
+.noMessage {
     display: flex;
     height: 608px;
     align-items: center;
@@ -128,7 +129,7 @@
     color: #8696a1;
 }
 
-.query-message-box{
+.query-message-box {
     height: 80px;
     display: flex;
     align-items: center;
@@ -142,11 +143,11 @@
     font-size: 15px;
 }
 
-.query-message-box:hover{
+.query-message-box:hover {
     background-color: #bab8be15;
 }
 
-.query-message-date{
+.query-message-date {
     height: 100%;
     width: 90%;
     display: flex;
@@ -154,13 +155,13 @@
     flex-direction: column;
 }
 
-.query-message{
+.query-message {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-.query-message-time{
+.query-message-time {
     height: 100%;
     font-size: 14px;
     display: flex;
@@ -181,7 +182,8 @@
     border-radius: 6px;
 }
 
-.searchIcon:hover, .three-dots:hover {
+.searchIcon:hover,
+.three-dots:hover {
     background-color: #bab8be15;
 }
 
@@ -190,14 +192,14 @@
     align-items: center;
 }
 
-.no-message{
+.no-message {
     height: 400px;
     width: 500px;
     font-size: larger;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(108,123,133,255);
+    color: rgba(108, 123, 133, 255);
 }
 
 .three-dots {
@@ -307,13 +309,13 @@
     gap: 10px;
 }
 
-.profile-box{
+.profile-box {
     height: 30px;
     width: 30px;
     border-radius: 50%;
 }
 
-.profile-pic{
+.profile-pic {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
@@ -391,7 +393,7 @@
     position: relative;
 }
 
-.images>img{
+.images>img {
     border-radius: 4px;
 }
 
@@ -427,7 +429,7 @@
     padding: 0px 15px;
 }
 
-.emoji-button{
+.emoji-button {
     cursor: pointer;
     font-size: 23px;
     background-color: #202c32;
@@ -579,9 +581,43 @@
     border-radius: 8px;
 }
 
-.wrapper >*{
+.wrapper>* {
     position: relative;
     top: -60px;
     left: -80px;
     background-color: rgb(5, 4, 4);
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .app {
+        height: 100vh;
+        width: 100vw;
+        background: #0c1317;
+        display: flex;
+        /* overflow: hidden; */
+    }
+  } 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .app {
+        height: 100vh;
+        width: 100vw;
+        background: #0c1317;
+        display: flex;
+        /* overflow: hidden; */
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .app {
+        height: 100vh;
+        width: 100vw;
+        background: #0c1317;
+        display: flex;
+        /* overflow: hidden; */
+    }
 }
