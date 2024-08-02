@@ -612,6 +612,12 @@
         max-height: 200px;
         max-width: 200px;
     }
+    .message-input {
+        font-size: 12.5px;
+    }
+    .current-time {
+        font-size: 11px;
+    }
   } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -638,6 +644,12 @@
         max-height: 250px;
         max-width: 300px;
         border-radius: 8px;
+    }
+    .message-input {
+        font-size: 13px;
+    }
+    .current-time {
+        font-size: 12px;
     }
   } 
 
